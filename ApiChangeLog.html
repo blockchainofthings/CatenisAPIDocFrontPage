@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catenis Enterprise API</title>
+
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+<body>
+<header>
+    <div class="container">
+        <p class="CatenisHeader">Catenis Enterprise API</p>
+    </div>
+</header>
+<div id="main">
+    <div class="container has-side-nav">
+        <aside>
+            <ul>
+                <li>
+                    <a href="ApiDocFrontPage.html">The API</a>
+                </li>
+                <li>
+                    <a href="/docs/api/0.5/index.html">API ver. 0.5</a>
+                </li>
+                <li>
+                    <a href="/docs/api/0.6/index.html">API ver. 0.6 <span style="color:lightgray">latest</span></a>
+                </li>
+                <li class="active">
+                    <a href="ApiChangeLog.html">Change log</a>
+                </li>
+            </ul>
+        </aside>
+        <article>
+            <h1>Catenis Enterprise API Change Log</h1>
+            <h3 class="ChangeLog">API ver. 0.6, 2018-04-04</h3>
+            <ul>
+                <li>
+                    <p>New asset related API methods:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><i>Issue Asset</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Reissue Asset</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Transfer Asset</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Retrieve Asset Info</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Get Asset Balance</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>List Owned Assets</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>List Issued Assets</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Retrieve Asset Issuance History</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>List Asset Holders</i></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Definition of the following new permission events:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><code>receive-notify-asset-of</code> - Receive notification of income asset issued by a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-notify-asset-from</code> - Receive notification of income asset from a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-notify-confirm-asset-of</code> - Receive notification of confirmation of pending asset issued by a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-notify-confirm-asset-from</code> - Receive notification of confirmation of pending asset transferred by a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-asset-of</code> - Receive an amount of an asset issued by a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-asset-from</code> - Receive an amount of an asset from a device</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Updated version (ver. 0.2) of the Catenis notification service, which defines the following
+                        new notification events:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><code>income-asset</code> - An amount of an asset has been received</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>confirmed-asset</code> - An amount of an asset that was pending due to an asset transfer has been confirmed</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 class="ChangeLog">API ver. 0.5, 2017-10-21</h3>
+            <ul>
+                <li>
+                    <p>Updated <i>Send Message</i> API method:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst">added new <code>readConfirmation</code> field to the <i>options</i> input parameter</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Updated <i>List Messages</i> API method:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst">added two new fields to the returned
+                                message entries: <code>readConfirmationEnabled</code>, and <code>msgCount</code></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 class="ChangeLog">API ver. 0.4, 2017-09-09</h3>
+            <ul>
+                <li>
+                    <p>New permission related API methods:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><i>List Permission Events</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Retrieve Permission Rights</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Set Permission Rights</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Check Effective Permission Right</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Retrieve Device Identification Info</i></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>New notification related API method: <i>List Notification Events</i></p>
+                </li>
+                <li>
+                    <p>Definition of the following permission events:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><code>receive-notify-new-msg</code> - Receive notification of new message from a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-notify-msg-read</code> - Receive notification of message read by a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>send-read-msg-confirm</code> - Send read message confirmation to a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>receive-msg</code> - Receive message from a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>disclose-main-props</code> - Disclose device's main properties (name, product unique ID) to a device</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>disclose-identity-info</code> - Disclose device's basic identification information to a device</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>New Catenis notification service (ver. 0.1), which defines the following notification events:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><code>new-msg-received</code> - A new message has been received</p>
+                        </li>
+                        <li>
+                            <p class="innerList"><code>sent-msg-read</code> - Previously sent message has been read by intended receiver (target device)</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>New WebSocket notification message dispatcher (ver. 0.1)</p>
+                </li>
+            </ul>
+            <h3 class="ChangeLog">API ver. 0.3, 2017-06-17</h3>
+            <ul>
+                <li>
+                    <p>New message related API method: <i>List Messages</i></p>
+                </li>
+                <li>
+                    <p>Updated <i>Read Message</i> API method:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst">added new <code>action</code> field to returned data</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 class="ChangeLog">API ver. 0.2, 2017-04-08</h3>
+            <ul>
+                <li>
+                    <p>New message related API method: <i>Retrieve Message Container</i></p>
+                </li>
+                <li>
+                    <p>Updated <i>Log Message</i> and <i>Send Message</i> API methods:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst">removed <code>txid</code> field from returned data</p>
+                        </li>
+                        <li>
+                            <p class="innerList">added new <code>messageId</code> field in returned data</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 class="ChangeLog">API ver. 0.1, 2017-02-24</h3>
+            <ul>
+                <li>
+                    <p>Initial version including the following message related API methods:</p>
+                    <ul style="margin:0">
+                        <li>
+                            <p class="innerListFirst"><i>Log Message</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Send Message</i></p>
+                        </li>
+                        <li>
+                            <p class="innerList"><i>Read Message</i></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+    </div>
+</div>
+<footer role="contentinfo">
+    <div class="container">
+        <p style="text-align: center">Copyright Blockchain of Things, Inc. - 2018</p>
+    </div>
+</footer>
+</body>
+</html>
