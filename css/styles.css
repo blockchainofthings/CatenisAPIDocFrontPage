@@ -36,7 +36,7 @@ a, a:link, a:active {
 
 a:hover {
     color: #fff;
-    background-color: #333399
+    background-color: #66cc33
 }
 
 a:hover code {
@@ -904,7 +904,7 @@ h4:hover > .anchor:before, h5:hover > .anchor:before, h6:hover > .anchor:before 
 
 .has-side-nav aside .active > a, .has-side-nav aside .active > a:hover {
     color: #fff;
-    background-color: #28287c
+    background-color: #1e6a0e
 }
 
 .has-side-nav article {

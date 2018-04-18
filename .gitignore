@@ -4,3 +4,6 @@
 # Catenis API doc build directories
 0.5
 0.6
+
+# Deploy directory
+deploy/
