@@ -2,6 +2,12 @@
 
 echo "Generating bundle (tar) file to deploy..."
 
+# Create deploy directory if it does not yet exist
+if [ ! -d deploy ]
+  then
+    mkdir deploy
+fi
+
 if [ -f deploy/CatenisAPIDoc.tar.gz ]
   # Save previous bundle file by changing its name (add time stamp to it)
   then
