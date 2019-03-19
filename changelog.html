@@ -32,10 +32,44 @@
     <div class="w-container">
       <div class="row-7 w-row">
         <div class="column-19 w-col w-col-3 w-col-small-3 w-col-tiny-3">
-          <div class="verticlenavdiv"><a href="index.html" class="leftnavlink">API Overview</a><a href="https://catenis.com/docs/api/0.6/" class="leftnavlink">Version 0.6 <span class="latest">Latest</span></a><a href="https://catenis.com/docs/api/0.5/" class="leftnavlink">Version 0.5</a><a href="changelog.html" class="leftnavlink">Change Log</a></div>
+          <div class="verticlenavdiv">
+            <a href="index.html" class="leftnavlink">API Overview</a>
+            <a href="https://catenis.com/docs/api/0.7/" class="leftnavlink">Version 0.7 <span class="latest">Latest</span></a>
+            <a href="https://catenis.com/docs/api/0.6/" class="leftnavlink">Version 0.6</a>
+            <a href="https://catenis.com/docs/api/0.5/" class="leftnavlink">Version 0.5</a>
+            <a href="changelog.html" class="leftnavlink">Change Log</a>
+          </div>
         </div>
         <div class="changelogcontentcolumn w-col w-col-9 w-col-small-9 w-col-tiny-9">
           <h2 class="h2-api">Catenis Enterprise API Change Log</h2>
+
+          <h3 class="heading-top">API ver. 0.7, 2019-03-16</h3>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated Log Message, Send Message and Read Message API methods:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">added capability to pass/read message in chunks</li>
+                <li class="change-log-list-items">added capability to process message asynchronously</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">New message related API method:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">Retrieve Message Progress</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated version (ver. 0.3) of the Catenis notification service, which defines the following new notification event:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items"><span class="methodspan">final-msg-progress</span> - Progress of asynchronous message processing has come to an end</li>
+              </ul>
+            </li>
+          </ul>
+
           <h3 class="heading-top">API ver. 0.6, 2018-04-04</h3>
           <ul class="unordered-list w-list-unstyled">
             <li class="list-item">New smart asset related API methods:</li>
