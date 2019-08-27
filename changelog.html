@@ -34,7 +34,8 @@
         <div class="column-19 w-col w-col-3 w-col-small-3 w-col-tiny-3">
           <div class="verticlenavdiv">
             <a href="index.html" class="leftnavlink">API Overview</a>
-            <a href="https://catenis.com/docs/api/0.7/" class="leftnavlink">Version 0.7 <span class="latest">Latest</span></a>
+            <a href="https://catenis.com/docs/api/0.8/" class="leftnavlink">Version 0.8 <span class="latest">Latest</span></a>
+            <a href="https://catenis.com/docs/api/0.7/" class="leftnavlink">Version 0.7</a>
             <a href="https://catenis.com/docs/api/0.6/" class="leftnavlink">Version 0.6</a>
             <a href="https://catenis.com/docs/api/0.5/" class="leftnavlink">Version 0.5</a>
             <a href="changelog.html" class="leftnavlink">Change Log</a>
@@ -42,6 +43,33 @@
         </div>
         <div class="changelogcontentcolumn w-col w-col-9 w-col-small-9 w-col-tiny-9">
           <h2 class="h2-api">Catenis Enterprise API Change Log</h2>
+
+          <h3 class="heading-top">API ver. 0.8, 2019-08-14</h3>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated List Messages and Retrieve Asset Issuance History API methods:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">added new <span class="methodspan">limit</span> and <span class="methodspan">skip</span> parameters to query string</li>
+                <li class="change-log-list-items">replaced <span class="methodspan">countExceeded</span> property with new <span class="methodspan">hasMore</span> property in returned data</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">New behavior for Retrieve Message Container API method:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">target virtual device is now allowed to retrieve container info of received messages</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Changes to Catenis notification service:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">new URI format for notification endpoints, which are now only dependent on the API version</li>
+              </ul>
+            </li>
+          </ul>
 
           <h3 class="heading-top">API ver. 0.7 (updated), 2019-05-30</h3>
           <ul class="unordered-list w-list-unstyled">
@@ -124,7 +152,7 @@
             <li class="list-item">Updated Send Message API method:</li>
             <li>
               <ul>
-                <li class="change-log-list-items">added new <span class="methodspan">readConfirmation</span> field to the options input parameter</li>
+                <li class="change-log-list-items">added new <span class="methodspan">readConfirmation</span> property to the options input parameter</li>
               </ul>
             </li>
           </ul>
@@ -132,7 +160,7 @@
             <li class="list-item">Updated List Messages API method:</li>
             <li>
               <ul>
-                <li class="change-log-list-items">added two new fields to the returned message entries: <span class="methodspan">readConfirmationEnabled</span>, and <span class="methodspan">msgCount</span></li>
+                <li class="change-log-list-items">added two new properties to the returned message entries: <span class="methodspan">readConfirmationEnabled</span>, and <span class="methodspan">msgCount</span></li>
               </ul>
             </li>
           </ul>
@@ -193,7 +221,7 @@
             <li class="list-item">Updated Read Message API method:</li>
             <li>
               <ul>
-                <li class="change-log-list-items">added new <span class="methodspan">action</span> field to returned data</li>
+                <li class="change-log-list-items">added new <span class="methodspan">action</span> property to returned data</li>
               </ul>
             </li>
           </ul>
@@ -210,8 +238,8 @@
             <li class="list-item">Updated Log Message and Send Message API methods:</li>
             <li>
               <ul>
-                <li class="change-log-list-items">removed <span class="methodspan">txid</span> field from returned data</li>
-                <li class="change-log-list-items">added new <span class="methodspan">messageId</span> field to returned data</li>
+                <li class="change-log-list-items">removed <span class="methodspan">txid</span> property from returned data</li>
+                <li class="change-log-list-items">added new <span class="methodspan">messageId</span> property to returned data</li>
               </ul>
             </li>
           </ul>
