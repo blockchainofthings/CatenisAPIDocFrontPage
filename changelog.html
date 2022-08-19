@@ -34,15 +34,95 @@
         <div class="column-19 w-col w-col-3 w-col-small-3 w-col-tiny-3">
           <div class="verticlenavdiv">
             <a href="index.html" class="leftnavlink">API Overview</a>
-            <a href="https://catenis.com/docs/api/0.11/" class="leftnavlink">Version 0.11 <span class="latest">Latest</span></a>
+            <a href="https://catenis.com/docs/api/0.12/" class="leftnavlink">Version 0.12 <span class="latest">Latest</span></a>
+            <a href="https://catenis.com/docs/api/0.11/" class="leftnavlink">Version 0.11</a>
             <a href="https://catenis.com/docs/api/0.10/" class="leftnavlink">Version 0.10</a>
-            <a href="https://catenis.com/docs/api/0.9/" class="leftnavlink">Version 0.9</a>
             <a href="versions.html" class="leftnavlink">All versions</a>
             <a href="changelog.html" class="leftnavlink">Change Log</a>
           </div>
         </div>
         <div class="changelogcontentcolumn w-col w-col-9 w-col-small-9 w-col-tiny-9">
           <h2 class="h2-api">Catenis API Change Log</h2>
+
+          <h3 class="heading-top">API ver. 0.12, 2022-08-09</h3>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">New non-fungible asset related API methods:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">Issue Non-Fungible Asset</li>
+                <li class="change-log-list-items">Reissue Non-Fungible Asset</li>
+                <li class="change-log-list-items">Retrieve Non-Fungible Asset Issuance Progress</li>
+                <li class="change-log-list-items">Retrieve Non-Fungible Token</li>
+                <li class="change-log-list-items">Retrieve Non-Fungible Token Retrieval Progress</li>
+                <li class="change-log-list-items">Transfer Non-Fungible Token</li>
+                <li class="change-log-list-items">Retrieve Non-Fungible Token Transfer Progress</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated Reissue Asset, Transfer Asset, Export Asset, Migrate Asset and Asset Export Outcome API methods:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">
+                  These methods accept only regular (fungible) assets. If an asset ID of a non-fungible asset is passed,
+                   they return the new error: [400] Not a regular (fungible) asset.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated Retrieve Asset Info API method:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">
+                  Returns an additional property, namely <span class="methodspan">isNonFungible</span>, which indicates whether the asset is a non-fungible asset or not.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated Retrieve Asset Issuance History API method:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items">
+                  The issuance event entries returned for non-fungible assets are different from the ones returned for
+                   regular (fungible) assets, in that:
+                  <ul>
+                    <li class="change-log-list-items">
+                      The <span class="methodspan">amount</span> property is replaced by a new <span class="methodspan">nfTokenIds</span>
+                       property, which lists the IDs of the non-fungible tokens that have been issued.
+                    </li>
+                    <li class="change-log-list-items">
+                      The <span class="methodspan">holdingDevice</span> property is replaced by a new <span class="methodspan">holdingDevices</span>
+                       property, which lists the Catenis virtual devices to which the issued non-fungible tokens have
+                       been assigned.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Updated version (ver. 0.5) of the Catenis notification service, which defines the following new notification events:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items"><span class="methodspan">nf-asset-issuance-outcome</span> - Non-fungible asset issuance has been finalized</li>
+                <li class="change-log-list-items"><span class="methodspan">nf-token-received</span> - One or more non-fungible tokens have been received</li>
+                <li class="change-log-list-items"><span class="methodspan">nf-token-confirmed</span> - One or more non-fungible tokens that were pending due to a non-fungible token transfer has been confirmed</li>
+                <li class="change-log-list-items"><span class="methodspan">nf-token-retrieval-outcome</span> - Non-fungible token retrieval has been finalized</li>
+                <li class="change-log-list-items"><span class="methodspan">nf-token-transfer-outcome</span> - Non-fungible token transfer has been finalized</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="unordered-list w-list-unstyled">
+            <li class="list-item">Definition of the following new permission events:</li>
+            <li>
+              <ul>
+                <li class="change-log-list-items"><span class="methodspan">receive-nf-token-of</span> - Receive a non-fungible token issued by a device</li>
+                <li class="change-log-list-items"><span class="methodspan">receive-nf-token-from</span> - Receive a non-fungible token from a device</li>
+              </ul>
+            </li>
+          </ul>
 
           <h3 class="heading-top">API ver. 0.11, 2021-09-02</h3>
           <ul class="unordered-list w-list-unstyled">
@@ -313,7 +393,7 @@
   <div class="bottombar">
     <div class="container-19 w-container">
       <div class="div-block-15 w-clearfix">
-        <div class="text-block-11">Copyright © 2018-2021, Blockchain of Things Inc. All rights reserved.</div>
+        <div class="text-block-11">Copyright © 2018-2022, Blockchain of Things Inc. All rights reserved.</div>
       </div>
     </div>
   </div>
