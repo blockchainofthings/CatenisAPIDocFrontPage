@@ -23,3 +23,9 @@ ln -s -F ../Catenis-API-Docs/deploy/0.6 0.6
 
 Then execute the shell script `predeploy.sh` to generate the bundle file  — a compressed tar file named CatenisAPIDoc.tar.gz
 written to the `deploy` directory — used to deploy the API documentation.
+
+## License
+
+This software is released under the [MIT License](LICENSE). Feel free to fork, and modify!
+
+Copyright © 2018-2023, Blockchain of Things Inc.
